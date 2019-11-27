@@ -31,6 +31,12 @@ class PostureRecognitionAgent(AngleInterpolationAgent):
     def recognize_posture(self, perception):
         posture = 'unknown'
         # YOUR CODE HERE
+        angles = []
+        for n in self.joint_names:
+            angles.append(perception.joint[n]
+
+        angles.append(perception.imu[0])
+        angles.append(perception.imu[1])
 
         return posture
 
